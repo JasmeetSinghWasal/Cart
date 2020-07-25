@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import GroceryItem from './GroceryItem';
+//import GroceryCart from './components/GroceryCart';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+export default class App extends Component {
+  constructor(props){
+  super(props)
+  this.state= 
+  {
+    cart:[]
+  }
+}
+  render(){
+    return    <div>
+      <header >
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -19,8 +28,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <GroceryItem/>
+      <GroceryCart items= {this.state.cart }/>
     </div>
-  );
+  
+  };
+  
+    
 }
 
-export default App;
