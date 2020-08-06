@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.grocery-cart
+{
+  float:right;
+  
+}
+
+#grocery-item
+{
+  float:left;
+  
+}
+
+table,th,td
+{
+  border:1px solid black;
+}
+
+#grocery-container
+{
+  padding:10px 10px 10px 10px;
+}
+

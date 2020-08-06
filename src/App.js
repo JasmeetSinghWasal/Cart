@@ -1,39 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import GroceryItem from './GroceryItem';
-//import GroceryCart from './components/GroceryCart';
+import GroceryItem from './components/GroceryItem';
+import GroceryCart from './components/GroceryCart';
+import Undo from './components/Undo';
+import Redo from './components/Redo';
 
 export default class App extends Component {
-  constructor(props){
-  super(props)
-  this.state= 
-  {
-    cart:[]
-  }
-}
+
   render(){
-    return    <div>
-      <header >
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <GroceryItem/>
-      <GroceryCart items= {this.state.cart }/>
+    return    <div id="grocery-container">  
+    <center><h2>Welcome to my react app!</h2></center>
+    <Undo/> <Redo/>
+    
+      <GroceryItem />
+      <GroceryCart />
     </div>
   
-  };
-  
-    
+  }
+     
 }
 
